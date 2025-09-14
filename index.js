@@ -1,6 +1,5 @@
 const express=require('express')
 const mongoose=require('mongoose')
-const functions = require("firebase-functions");
 const bodyParser= require('body-parser')
 
 const routes=require('./routes/restaurent')
@@ -26,5 +25,3 @@ mongoose.connect(url,{useNewUrlParser:true, useUnifiedTopology:true})
 app.listen(port,function(err){
     console.log("it is working at"+ port)
 })
-
-exports.api = functions.https.onRequest(app);
