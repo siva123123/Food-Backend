@@ -4,7 +4,7 @@ const bodyParser= require('body-parser')
 
 const routes=require('./routes/restaurent')
 
-const url="mongodb+srv://siva:siva%402002@cluster0.bdhwhxn.mongodb.net/?retryWrites=true&w=majority"
+const url="mongodb+srv://sivadatabase12:Siva%402002@cluster0.irvzkhh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 const app=express()
 const port =8060
