@@ -19,6 +19,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/',routes)
 
+setInterval(async () => {
+  try {
+    await mongoose.connection.db.admin().ping();
+    console.log('MongoDB keep-alive ping');
+  } catch (err) {
+    console.error('Ping failed:', err);
+  }
+}, 5 * 60 * 1000); // every 5 minutes
+
 
 mongoose.connect(url,{useNewUrlParser:true, useUnifiedTopology:true})
 
