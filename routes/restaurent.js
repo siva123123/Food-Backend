@@ -1,6 +1,6 @@
 const express = require('express');
 const routes = express.Router();
-const bcrypt=require('bcrypt')
+const bcrypt=require('bcryptjs')
 const restaurentController = require('../controller/restaurent');
 const locationController=require('../controller/location')
 const mealsController=require('../controller/meals');

@@ -1,5 +1,5 @@
 const Login= require('../model/login')
-const bcrypt=require('bcrypt')
+const bcrypt=require('bcryptjs')
 
 exports.postregister=async(req,res)=>{
     const { username, email, password } = req.body;
